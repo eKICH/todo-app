@@ -41,23 +41,28 @@ Persistence: In-Memory (data resets on reload)
 
 
 ## 🚀Getting Started
-Installation
-Clone the repository:
 
-Bash
+# Installation
 
+# Clone the repository:
+
+```Bash
 git clone https://github.com/eKICH/todo-app.git
 cd todo-app
-Install dependencies:
+```
 
-Bash
+# Install dependencies:
 
+```Bash
 npm install
-Run the application in development mode:
+```
 
-Bash
+# Run the application in development mode:
 
+```Bash
 ng serve
+```
+
 Open your browser and navigate to http://localhost:4200/.
 
 
