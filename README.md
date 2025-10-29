@@ -4,7 +4,8 @@ A modern, high-performance task management application built with Angular v20.3.
 🔗 ## Live Application
 The application is deployed and hosted on Vercel:
 
-Live Demo: [https://todoapp-tau-wine.vercel.app/list]
+Live Demo: https://todoapp-ten-psi.vercel.app/list
+
 
 ## ✨Features
 In-Memory State: All task data is managed in the browser's memory using Angular Signals. Data persists only for the current session and will reset upon page reload.
