@@ -1,0 +1,62 @@
+<section>
+    @if (todos().length >= 1) {
+    <table>
+        <thead>
+            <th>Creation Date</th>
+            <th>Title</th>
+            <th>Start</th>
+            <th>End</th>
+            <th>Status</th>
+            <th>Action</th>
+        </thead>
+
+        @for (todo of todos(); track todo.id) {
+        <tr>
+            <td>{{todo.createdAt | date: 'dd-MM-yyyy'}}</td>
+            <td>{{todo.title}}</td>
+            <td>{{todo.startDate | date: 'dd-MM-yyyy'}}</td>
+            <td>{{todo.endDate | date: 'dd-MM-yyyy'}}</td>
+            <td>
+                <span class="td status" [class.open]="todo.status === 'open'"
+                    [class.complete]="todo.status === 'complete'">
+                    {{todo.status | titlecase }}
+                </span>
+
+            </td>
+            <td>
+                <a class="btn-todo-list" (click)="onViewTodo(todo)">View</a>
+                |
+                <a class="btn-todo-list" (click)="onEditTodo(todo)">Edit</a>
+                @if (todo.status !== 'complete') {
+                |
+                <a class="btn-todo-list" (click)="onDeleteTodo(todo)">Delete</a>
+                }
+            </td>
+        </tr>
+        }
+    </table>
+    } @else {
+        <p class="no-todos">No Todos available!</p>
+    }
+
+</section>
+
+<!-- 
+
+@if (todos().length > 10) {
+<div class="pagination-container">
+    <div class="pages">
+        <ul class="numbers">
+            <li><<</li>
+            <li><</li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>></li>
+            <li>>></li>
+        </ul>
+    </div>
+</div>
+} -->

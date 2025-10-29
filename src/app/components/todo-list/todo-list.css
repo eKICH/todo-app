@@ -1,0 +1,46 @@
+section {
+    margin: 40px 80px 0 80px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    padding: 0 20px;
+    border-radius: 4px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    font-weight: 600;
+}
+
+table > thead > th {
+    height: 50px;
+    border-bottom: 1px solid gray;
+    text-align: left;
+}
+
+tr {
+    height: 40px;
+    border-bottom: 1px dashed gray;
+    font-weight: 300;
+}
+
+.td {
+    font-size: small;
+}
+
+tr:last-child {
+    border-bottom: none;
+}
+
+
+.btn-todo-list {
+    cursor: pointer;
+    color: red;
+}
+
+.no-todos {
+    padding: 10px;
+}

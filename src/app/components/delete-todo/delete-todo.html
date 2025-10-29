@@ -1,0 +1,10 @@
+@if (todo(); as t) {
+<section>
+    <p>Are you sure you want to delete todo <strong>{{t.title}}</strong> with id <strong>{{t.id}}?</strong></p>
+
+    <div class="delete-action">
+        <app-button [label]="'No'" [color]="'search'" (clicked)="onNo()" />
+        <app-button [label]="'Yes'" [color]="'cancel'" (clicked)="onConfirm()"/>
+    </div>
+</section>
+}

@@ -1,0 +1,47 @@
+@if (todo(); as t) {
+<section class="todo-details">
+    <div class="title-status">
+        <div class="title-status-group">
+            <label for="">Title</label>
+            <h3 class="content">{{ t.title| titlecase}}</h3>
+        </div>
+
+        <div class="title-status-group">
+            <label for="">Status</label>
+            <p class="content status" [class.open]="t.status === 'open'" [class.complete]="t.status === 'complete'">{{
+                t.status | titlecase}}</p>
+        </div>
+    </div>
+
+    <div class="todo-details-date">
+        <div class="todo-details-group">
+            <label for="">Start</label>
+            <p class="content">{{ formatDate(t.startDate) }}</p>
+        </div>
+        <div class="todo-details-group">
+            <label for="">End</label>
+            <p class="content">{{ formatDate(t.endDate) }}</p>
+        </div>
+    </div>
+    <div class="todo-details-group">
+        <label for="">Description</label>
+        <p class="content">{{ t.description || 'No description provided'}}</p>
+    </div>
+
+    @if (t.task?.length) {
+    <div class="todo-details-group">
+        <label for="">Tasks</label>
+        <ul class="todo-tasks">
+            @for (task of t.task; track task) {
+            <li>{{ task || 'No Tasks provided'}}</li>
+            }
+        </ul>
+    </div>
+    } @else {
+    <div class="todo-details-group">
+        <label for="">Tasks</label>
+        <p class="content">No Tasks</p>
+    </div>
+    }
+</section>
+}

@@ -1,0 +1,31 @@
+button {
+    margin-right: 50px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.default {
+    background-color: green;
+    color: #fff;
+}
+
+.search {
+    background-color: #000;
+    color: #fff;
+}
+
+.close {
+    margin: 0;
+    padding: 5px;
+    border: none;
+    background-color: #5d5c5c;
+    color: whitesmoke;
+}
+
+.cancel {
+    border: none;
+    background: red;
+    color: #fff;
+}

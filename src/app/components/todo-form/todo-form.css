@@ -1,0 +1,37 @@
+
+.form-group {
+    display: flex;
+    gap: 10px;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-control label {
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.add-task {
+    margin-top: 32px;
+}
+
+.task-error {
+    color: red;
+    font-size: small;
+}
+.form-actions {
+    margin-top: 10px;
+    border-top: 1px solid gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.action-btn-ml {
+    margin-left: -30px;
+    margin-right: -50px;
+}

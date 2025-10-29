@@ -1,0 +1,39 @@
+@if (totalPages() > 1) {
+<div class="pagination-container">
+    <div class="pages">
+        <ul class="numbers">
+            <li>
+                <a [class.disabled]="currentPage() === 1" (click)="goToPage(1)">
+                    &lt;&lt;
+                </a>
+            </li>
+            <li>
+                <a [class.disabled]="currentPage() === 1" (click)="goToPage(currentPage() - 1)">
+                    &lt;
+                </a>
+            </li>
+
+
+            @for (page of pageNumbers(); track page) {
+            <li>
+                <a [class.active]="currentPage() === page" (click)="goToPage(page)">
+                    {{ page }}
+                </a>
+            </li>
+            }
+
+
+            <li>
+                <a [class.disabled]="currentPage() === totalPages()" (click)="goToPage(currentPage() + 1)">
+                    &gt;
+                </a>
+            </li>
+            <li>
+                <a [class.disabled]="currentPage() === totalPages()" (click)="goToPage(totalPages())">
+                    &gt;&gt;
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+}

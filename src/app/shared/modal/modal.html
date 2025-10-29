@@ -1,0 +1,28 @@
+@if (isOpen()) {
+<div class="modal-overlay">
+    <div class="modal-content">
+        <div class="modal-header">
+            <p class="modal-title">{{ title() }}</p>
+            <app-button [type]="'button'" [label]="'X Close'" [color]="'close'" (clicked)="close()" />
+        </div>
+        <div class="modal-body">
+            @if (title() !== 'Delete Todo') {
+                <div class="top-info">
+                <p>{{ topHeader() }}</p>
+            </div>
+            }
+            
+            @if (contentComponent()) {
+            <ng-container [ngComponentOutlet]="contentComponent()"
+                [ngComponentOutletInputs]="contentInputs()"></ng-container>
+
+            } @else {
+            <ng-template #defaultContent>
+                <ng-content></ng-content>
+            </ng-template>
+            <ng-container [ngTemplateOutlet]="defaultContent"></ng-container>
+            }
+        </div>
+    </div>
+</div>
+}

@@ -1,0 +1,23 @@
+.todo-details {
+    margin-top: 10px;
+}
+
+.title-status {
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+label {
+    font-weight: 500;
+}
+
+.content {
+    font-weight: 300;
+    font-family: sans-serif;
+}
+
+.todo-details-group {
+    margin-top: 10px;
+}

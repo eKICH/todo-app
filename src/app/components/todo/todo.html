@@ -1,0 +1,31 @@
+<div class="main-container">
+    <section>
+        <div class="filter">
+            <select name="size" id="size" class="size" [(ngModel)]="pageSize" (change)="onPageSizeChange($event)">
+                <option value="10">10</option>
+                <option value="25">25</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+            </select>
+            <select name="status" id="status" class="status size" [ngModel]="statusFilter()"
+                (change)="onStatusFilterChange($event)">
+                <option value="all">All</option>
+                <option value="open"> Open </option>
+                <option value="complete"> Complete </option>
+            </select>
+            <input type="text" class="text" placeholder="Title" [ngModel]="searchTerm()"
+                (change)="onSearchTermChange($event)">
+            <app-button [label]="'Search'" [color]="'search'" (clicked)="onSearchTermChange(searchTerm())" />
+        </div>
+        <app-button [label]="'+ Add Todo'" [color]="'default'" (clicked)="openAddModal()" />
+    </section>
+    <app-todo-list [todos]="displayedTodos()" (editTodo)="openEditModal($event)" (viewTodo)="openViewTodoModal($event)"
+        (deleteTodo)="openDeleteTodoModal($event)" />
+    <app-pagination [totalPages]="totalPages()" [currentPage]="currentPage()" [pageNumbers]="pageNumbers()"
+        (pageChange)="goToPage($event)" />
+
+    <app-modal [isOpen]="isModalOpen()" [title]="modalTitle()" [topHeader]="modalTop()"
+        [contentComponent]="contentComponent()" [contentInputs]="contentInputs()" (closed)="closeModal()" />
+
+    <app-toast [toast]="activeToast()" />
+</div>

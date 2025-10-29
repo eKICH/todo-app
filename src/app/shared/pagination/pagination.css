@@ -1,0 +1,49 @@
+.pagination-container {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin: 10px 80px 0 0;
+}
+
+.pages {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    max-width: fit-content;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.numbers {
+    display: flex;
+    gap: 8px;
+    text-decoration: none;
+}
+
+.numbers li {
+    list-style: none;
+    padding: 5px;
+}
+
+.numbers li:hover {
+    cursor: pointer;
+    color: gray;
+}
+
+.active {
+    border-radius: 8px;
+    background-color: black;
+    color: #fff;
+    padding: 5px;
+}
+
+.disabled {
+    color: #6c757d;
+    background-color: #f8f9fa;
+    border-color: #dee2e6;
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.disabled:hover {
+    cursor: default;
+}

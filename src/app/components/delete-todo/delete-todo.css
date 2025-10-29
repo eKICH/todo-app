@@ -1,0 +1,16 @@
+.delete-action {
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+p {
+    margin-top: 20px;
+    font-weight: 300;
+}
+
+strong {
+    font-weight: 600;
+}
