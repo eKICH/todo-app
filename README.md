@@ -1,12 +1,12 @@
-📝 Angular Signal-Based Todo Application
+## 📝Angular Signal-Based Todo Application
 A modern, high-performance task management application built with Angular v20.3.3 and leveraging the new Signals feature for dynamic, in-memory state management. This application demonstrates component modularity, powerful list manipulation, and reliable user feedback.
 
-🔗 Live Application
+🔗 ## Live Application
 The application is deployed and hosted on Vercel:
 
 Live Demo: https://todoapp-tau-wine.vercel.app/list
 
-✨ Features
+## ✨Features
 In-Memory State: All task data is managed in the browser's memory using Angular Signals. Data persists only for the current session and will reset upon page reload.
 
 Signal-Based State: Utilizes Angular Signals for reactive and efficient state management.
@@ -28,7 +28,7 @@ Validation: User-friendly form validation that provides immediate error feedback
 Routing: Uses the Angular Router to manage the primary list view (/list) and route navigation logic.
 
 
-🛠️ Technology Stack
+## 🛠️Technology Stack
 Framework: Angular v20.3.3 (Standalone Components)
 
 State Management: Angular Signals
@@ -40,7 +40,7 @@ Deployment: Vercel (using GitHub Actions for CI)
 Persistence: In-Memory (data resets on reload)
 
 
-🚀 Getting Started
+## 🚀Getting Started
 Installation
 Clone the repository:
 
@@ -61,5 +61,5 @@ ng serve
 Open your browser and navigate to http://localhost:4200/.
 
 
-⚙️ CI/CD (Continuous Integration / Continuous Deployment)
+## ⚙️CI/CD (Continuous Integration / Continuous Deployment)
 The repository utilizes a CI pipeline via GitHub Actions (.github/workflows/ci.yml). This automates the build process, runs unit tests, and prepares the optimized artifacts, which are then automatically deployed to Vercel upon push to the main branch.
